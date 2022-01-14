@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.*;
 
 @RestController
-@RequestMapping("/service")
+@RequestMapping("/api")
 public class ProductController {
 
     Logger logger = LogManager.getLogger(ProductController.class);
@@ -38,9 +38,13 @@ public class ProductController {
     }
 
     @GetMapping("/products")
-    public List<Product> getProductsAll() {
+    public List<Product> getProductsAll() throws ApiRestException{
 
         logger.info("GET Request recibido string");
+
+        if (this.products.size() == 0) {
+            throw new ApiRestException("no hay productos cargados");
+        }
 
         return this.products;
     }
