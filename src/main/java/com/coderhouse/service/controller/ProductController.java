@@ -38,7 +38,7 @@ public class ProductController {
     }
 
     @GetMapping("/products")
-    public List<Product> getProductsAll() throws ApiRestException{
+    public List<Product> getProducts() throws ApiRestException{
 
         logger.info("GET Request recibido string");
 

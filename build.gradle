@@ -18,9 +18,28 @@ configurations.all {
 
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
-	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	implementation 'org.springframework:spring-aspects:5.3.14'
+    implementation 'org.jetbrains:annotations:20.1.0'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
 
 	implementation 'org.springframework.boot:spring-boot-starter-log4j2'
+	implementation 'org.springframework.boot:spring-boot-starter-aop:2.6.2'
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+
+//	Spring Data Postgres
+	implementation("org.springframework.boot:spring-boot-starter-data-jdbc")
+	implementation("org.springframework.boot:spring-boot-starter-jdbc")
+	runtimeOnly("org.postgresql:postgresql")
+
+
+//	Spring Data MariaDB
+	runtimeOnly("org.mariadb.jdbc:mariadb-java-client")
+
+//	Spring Data MySQL
+	runtimeOnly("mysql:mysql-connector-java")
+
+//	Spring Data SQLite
+	implementation("org.xerial:sqlite-jdbc")
 }
 
 dependencyManagement {
