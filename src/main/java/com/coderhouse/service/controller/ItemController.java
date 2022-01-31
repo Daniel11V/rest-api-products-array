@@ -1,16 +1,11 @@
 package com.coderhouse.service.controller;
 
-import com.coderhouse.service.handle.ApiRestException;
 import com.coderhouse.service.model.Item;
 import com.coderhouse.service.service.ItemService;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 
 @RestController
 @RequestMapping("/api/item")
