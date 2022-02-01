@@ -40,6 +40,10 @@ dependencies {
 
 //	Spring Data SQLite
 	implementation("org.xerial:sqlite-jdbc")
+
+//	Http Request Client
+	implementation("org.apache.httpcomponents:httpclient:4.5.13")
+
 }
 
 dependencyManagement {
